@@ -5,8 +5,8 @@ const PORTFOLIO_DATA = {
     contact: [
         { label: "Phone", value: "+91-8072231360", link: "tel:+918072231360", icon: "phone" },
         { label: "Email", value: "tharunhrithick5@gmail.com", link: "mailto:tharunhrithick5@gmail.com", icon: "email" },
-        { label: "LinkedIn", value: "LinkedIn Profile", link: "https://linkedin.com", icon: "linkedin" },
-        { label: "GitHub", value: "GitHub Profile", link: "https://github.com", icon: "github" }
+        { label: "LinkedIn", value: "LinkedIn Profile", link: "https://www.linkedin.com/in/tharun-hrithick-sr-56a601293/", icon: "linkedin" },
+        { label: "GitHub", value: "GitHub Profile", link: "https://github.com/thrithick5", icon: "github" }
     ],
     objective: "Fourth-year B.Tech student in Information Science and Engineering with hands-on experience in Python, Generative AI, and prompt engineering. Skilled at working closely with large language models, writing clear domain-specific prompts, and evaluating model outputs with strong attention to detail. Comfortable working independently in remote, asynchronous environments, and equally adaptable to in-office settings, and eager to apply research, reasoning, and analytical skills to help improve the performance of AI systems.",
     skills: [
@@ -118,14 +118,14 @@ export default function App() {
                     </div>
                     <h1 className="name-title">{PORTFOLIO_DATA.name}</h1>
                     <p className="subtitle">{PORTFOLIO_DATA.title}</p>
-                    
+
                     <div className="contacts-grid">
                         {PORTFOLIO_DATA.contact.map((info, idx) => (
-                            <a 
-                                key={idx} 
-                                href={info.link} 
-                                target="_blank" 
-                                rel="noreferrer" 
+                            <a
+                                key={idx}
+                                href={info.link}
+                                target="_blank"
+                                rel="noreferrer"
                                 className="contact-card"
                                 id={`contact-link-${info.label.toLowerCase()}`}
                             >
