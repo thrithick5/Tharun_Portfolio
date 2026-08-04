@@ -89,12 +89,12 @@ export const projects = [
   {
     number: "03",
     title: "Automated Report Generator",
-    stack: "FastAPI · Gemini API · SQLAlchemy",
+    stack: "FastAPI · Mistral API · SQLAlchemy",
     accent: "#e11d48",
     description:
-      "Parses Git repositories to auto-generate structured development summaries via the Gemini 1.5 Flash API.",
+      "Parses Git repositories to auto-generate structured development summaries via the Mistral AI API.",
     span: "lg:col-span-2",
-    link: "",
+    link: "https://automated-report-generator-frontend.vercel.app/",
   },
   {
     number: "04",
