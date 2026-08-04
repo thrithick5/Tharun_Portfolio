@@ -74,6 +74,7 @@ export const projects = [
     description:
       "Full-stack healthcare assistant answering medical queries from reports, PDFs and images with context-aware RAG responses.",
     span: "lg:col-span-1 lg:row-span-2",
+    link: "",
   },
   {
     number: "02",
@@ -83,6 +84,7 @@ export const projects = [
     description:
       "End-to-end medical image classification of CT scans with 91% validation accuracy and real-time predictions.",
     span: "lg:col-span-2",
+    link: "https://lung-cancer-prediction-frontend.vercel.app",
   },
   {
     number: "03",
@@ -92,6 +94,7 @@ export const projects = [
     description:
       "Parses Git repositories to auto-generate structured development summaries via the Gemini 1.5 Flash API.",
     span: "lg:col-span-2",
+    link: "",
   },
   {
     number: "04",
@@ -101,6 +104,7 @@ export const projects = [
     description:
       "Real-time sentiment engine matching emotional states to context-specific audio playlists at 88% accuracy.",
     span: "lg:col-span-3",
+    link: "",
   },
 ];
 
