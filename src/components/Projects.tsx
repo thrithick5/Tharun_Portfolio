@@ -85,18 +85,22 @@ function FeaturedCard({ p }: { p: Project }) {
 
   if (isLink) {
     return (
-      <motion.a
+      <a
         href={p.link}
         target="_blank"
         rel="noopener noreferrer"
-        variants={fadeUp}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true, margin: "-60px" }}
-        className={`${cardBase} flex-col lg:row-span-2 lg:col-span-1 cursor-pointer`}
+        className="contents"
       >
-        {content}
-      </motion.a>
+        <motion.article
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, margin: "-60px" }}
+          className={`${cardBase} flex-col lg:row-span-2 lg:col-span-1 cursor-pointer`}
+        >
+          {content}
+        </motion.article>
+      </a>
     );
   }
 
@@ -146,18 +150,22 @@ function SplitCard({ p, reverse }: { p: Project; reverse?: boolean }) {
 
   if (isLink) {
     return (
-      <motion.a
+      <a
         href={p.link}
         target="_blank"
         rel="noopener noreferrer"
-        variants={fadeUp}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true, margin: "-60px" }}
-        className={`${cardBase} flex-col lg:col-span-2 ${reverse ? "lg:flex-row-reverse" : "lg:flex-row"} gap-6 lg:items-center cursor-pointer`}
+        className="contents"
       >
-        {content}
-      </motion.a>
+        <motion.article
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, margin: "-60px" }}
+          className={`${cardBase} flex-col lg:col-span-2 ${reverse ? "lg:flex-row-reverse" : "lg:flex-row"} gap-6 lg:items-center cursor-pointer`}
+        >
+          {content}
+        </motion.article>
+      </a>
     );
   }
 
@@ -210,18 +218,22 @@ function WideCard({ p }: { p: Project }) {
 
   if (isLink) {
     return (
-      <motion.a
+      <a
         href={p.link}
         target="_blank"
         rel="noopener noreferrer"
-        variants={fadeUp}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true, margin: "-60px" }}
-        className={`${cardBase} flex-col lg:col-span-3 lg:flex-row lg:items-center lg:gap-10 cursor-pointer`}
+        className="contents"
       >
-        {content}
-      </motion.a>
+        <motion.article
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, margin: "-60px" }}
+          className={`${cardBase} flex-col lg:col-span-3 lg:flex-row lg:items-center lg:gap-10 cursor-pointer`}
+        >
+          {content}
+        </motion.article>
+      </a>
     );
   }
 
