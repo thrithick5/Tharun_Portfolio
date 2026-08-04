@@ -51,16 +51,8 @@ function Arrow() {
 /* 01 — Tall featured card (left column, spans two rows) */
 function FeaturedCard({ p }: { p: Project }) {
   const isLink = !!p.link;
-  const Container = isLink ? motion.a : motion.article;
-  return (
-    <Container
-      variants={fadeUp}
-      initial="hidden"
-      whileInView="show"
-      viewport={{ once: true, margin: "-60px" }}
-      className={`${cardBase} flex-col lg:row-span-2 lg:col-span-1 ${isLink ? "cursor-pointer" : ""}`}
-      {...(isLink ? { href: p.link, target: "_blank", rel: "noopener noreferrer" } : {})}
-    >
+  const content = (
+    <>
       <Glow accent={p.accent} className="-top-20 -left-16 h-64 w-64" />
       <GhostNumber number={p.number} />
 
@@ -88,23 +80,44 @@ function FeaturedCard({ p }: { p: Project }) {
           <span className="h-px flex-1 bg-gradient-to-r from-crimson-800/60 to-transparent" />
         </div>
       </div>
-    </Container>
+    </>
+  );
+
+  if (isLink) {
+    return (
+      <motion.a
+        href={p.link}
+        target="_blank"
+        rel="noopener noreferrer"
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, margin: "-60px" }}
+        className={`${cardBase} flex-col lg:row-span-2 lg:col-span-1 cursor-pointer`}
+      >
+        {content}
+      </motion.a>
+    );
+  }
+
+  return (
+    <motion.article
+      variants={fadeUp}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, margin: "-60px" }}
+      className={`${cardBase} flex-col lg:row-span-2 lg:col-span-1`}
+    >
+      {content}
+    </motion.article>
   );
 }
 
 /* 02 & 03 — Horizontal split cards, alternating mock side */
 function SplitCard({ p, reverse }: { p: Project; reverse?: boolean }) {
   const isLink = !!p.link;
-  const Container = isLink ? motion.a : motion.article;
-  return (
-    <Container
-      variants={fadeUp}
-      initial="hidden"
-      whileInView="show"
-      viewport={{ once: true, margin: "-60px" }}
-      className={`${cardBase} flex-col lg:col-span-2 ${reverse ? "lg:flex-row-reverse" : "lg:flex-row"} gap-6 lg:items-center ${isLink ? "cursor-pointer" : ""}`}
-      {...(isLink ? { href: p.link, target: "_blank", rel: "noopener noreferrer" } : {})}
-    >
+  const content = (
+    <>
       <Glow accent={p.accent} className="top-1/2 -left-10 h-56 w-56 -translate-y-1/2" />
 
       <div className="relative shrink-0 lg:w-1/2">
@@ -128,23 +141,44 @@ function SplitCard({ p, reverse }: { p: Project; reverse?: boolean }) {
           <Arrow />
         </div>
       </div>
-    </Container>
+    </>
+  );
+
+  if (isLink) {
+    return (
+      <motion.a
+        href={p.link}
+        target="_blank"
+        rel="noopener noreferrer"
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, margin: "-60px" }}
+        className={`${cardBase} flex-col lg:col-span-2 ${reverse ? "lg:flex-row-reverse" : "lg:flex-row"} gap-6 lg:items-center cursor-pointer`}
+      >
+        {content}
+      </motion.a>
+    );
+  }
+
+  return (
+    <motion.article
+      variants={fadeUp}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, margin: "-60px" }}
+      className={`${cardBase} flex-col lg:col-span-2 ${reverse ? "lg:flex-row-reverse" : "lg:flex-row"} gap-6 lg:items-center`}
+    >
+      {content}
+    </motion.article>
   );
 }
 
 /* 04 — Full-width wide card */
 function WideCard({ p }: { p: Project }) {
   const isLink = !!p.link;
-  const Container = isLink ? motion.a : motion.article;
-  return (
-    <Container
-      variants={fadeUp}
-      initial="hidden"
-      whileInView="show"
-      viewport={{ once: true, margin: "-60px" }}
-      className={`${cardBase} flex-col lg:col-span-3 lg:flex-row lg:items-center lg:gap-10 ${isLink ? "cursor-pointer" : ""}`}
-      {...(isLink ? { href: p.link, target: "_blank", rel: "noopener noreferrer" } : {})}
-    >
+  const content = (
+    <>
       <Glow accent={p.accent} className="-bottom-24 left-1/3 h-72 w-72" />
 
       <div className="relative shrink-0 lg:w-2/5">
@@ -171,7 +205,36 @@ function WideCard({ p }: { p: Project }) {
           </span>
         </div>
       </div>
-    </Container>
+    </>
+  );
+
+  if (isLink) {
+    return (
+      <motion.a
+        href={p.link}
+        target="_blank"
+        rel="noopener noreferrer"
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, margin: "-60px" }}
+        className={`${cardBase} flex-col lg:col-span-3 lg:flex-row lg:items-center lg:gap-10 cursor-pointer`}
+      >
+        {content}
+      </motion.a>
+    );
+  }
+
+  return (
+    <motion.article
+      variants={fadeUp}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, margin: "-60px" }}
+      className={`${cardBase} flex-col lg:col-span-3 lg:flex-row lg:items-center lg:gap-10`}
+    >
+      {content}
+    </motion.article>
   );
 }
 
