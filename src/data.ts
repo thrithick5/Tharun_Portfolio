@@ -170,7 +170,8 @@ export const galleryItems = [
     caption: "Healthcare Assistant",
     background:
       "linear-gradient(135deg, #1a0a0f, #5c0000 45%, #e11d48 120%)",
-    image: null,
+    image: "/nerve-chat.png",
+    link: "https://nerve-healthcare-assistant.vercel.app",
   },
   {
     label: "Portrait",
