@@ -74,7 +74,7 @@ export const projects = [
     description:
       "Full-stack healthcare assistant answering medical queries from reports, PDFs and images with context-aware RAG responses.",
     span: "lg:col-span-1 lg:row-span-2",
-    link: "",
+    link: "https://nerve-healthcare-assistant.vercel.app",
   },
   {
     number: "02",
@@ -104,7 +104,7 @@ export const projects = [
     description:
       "Real-time sentiment engine matching emotional states to context-specific audio playlists at 88% accuracy.",
     span: "lg:col-span-3",
-    link: "",
+    link: "https://emotion-detection-music-recommendat-kohl.vercel.app",
   },
 ];
 
