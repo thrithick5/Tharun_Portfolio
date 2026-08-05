@@ -5,7 +5,7 @@ export const portfolio = {
   tagline: "Full-Stack Developer & AI Enthusiast",
   location: "Bangalore, India",
   objective:
-    "Fourth-year B.Tech student in Information Science and Engineering with hands-on experience in Python, Generative AI, and prompt engineering. Skilled at working closely with large language models, writing clear domain-specific prompts, and evaluating model outputs with strong attention to detail. Comfortable working independently in remote, asynchronous environments, and equally adaptable to in-office settings, and eager to apply research, reasoning, and analytical skills to help improve the performance of AI systems.",
+    "Fourth-year B.Tech student in Information Science and Engineering with hands-on experience in Python, Generative AI, and prompt engineering. Skilled at working closely with large language models, writing clear domain-specific prompts, and evaluating model outputs with strong attention to detail. Comfortable working independently in remote, asynchronous environments, while remaining adaptable to in-office settings and eager to apply research, reasoning, and analytical skills to help improve the performance of AI systems.",
   contact: {
     phone: "+91-8072231360",
     email: "tharunhrithick5@gmail.com",
@@ -48,6 +48,8 @@ export const skills = [
       "Machine Learning",
       "RAG",
       "Deep Learning",
+      "Langchain",
+      "LangGraph",
     ],
   },
   {
@@ -69,7 +71,7 @@ export const projects = [
   {
     number: "01",
     title: "Nerve — AI Healthcare Assistant",
-    stack: "FastAPI · React · PostgreSQL · RAG · OCR",
+    stack: "FastAPI · React · TypeScript · PostgreSQL · ChromaDB · Mistral AI · RAG · OCR · Docker",
     accent: "#e11d48",
     description:
       "Full-stack healthcare assistant answering medical queries from reports, PDFs and images with context-aware RAG responses.",
@@ -79,7 +81,7 @@ export const projects = [
   {
     number: "02",
     title: "Early Lung Cancer Detection",
-    stack: "PyTorch · Flask · CNN · SQL",
+    stack: "Deep Learning · Flask · PyTorch · CT Scans · SQL",
     accent: "#8b0000",
     description:
       "End-to-end medical image classification of CT scans with 91% validation accuracy and real-time predictions.",
@@ -89,7 +91,7 @@ export const projects = [
   {
     number: "03",
     title: "Automated Report Generator",
-    stack: "FastAPI · Mistral API · SQLAlchemy",
+    stack: "FastAPI · Generative AI · Mistral API · SQLAlchemy · SQLite",
     accent: "#e11d48",
     description:
       "Parses Git repositories to auto-generate structured development summaries via the Mistral AI API.",
@@ -99,7 +101,7 @@ export const projects = [
   {
     number: "04",
     title: "Emotion Detection & Music",
-    stack: "Python · Scikit-Learn · NLP",
+    stack: "PyTorch · ONNX Runtime · Scikit-Learn · Flask · Python · Cosine Similarity · Tailwind CSS",
     accent: "#9f1239",
     description:
       "Real-time sentiment engine matching emotional states to context-specific audio playlists at 88% accuracy.",
@@ -110,25 +112,25 @@ export const projects = [
 
 export const workExperience = [
   {
-    period: "Present",
+    period: "July 2026",
     role: "AI Agent Development Intern",
     company: "MacAppStudio",
     description:
-      "Developed Nerve, an AI-powered healthcare assistant using FastAPI, React and RAG for context-aware responses from medical reports, PDFs and images. Implemented OCR processing with Tesseract, semantic retrieval with ChromaDB, and JWT/Google authentication with PostgreSQL-backed conversation history.",
+      "Developed Nerve, an AI-powered Healthcare Assistant using FastAPI, React, and RAG to provide context-aware responses from uploaded medical reports, PDFs, and images. Implemented OCR-based document processing with Tesseract, semantic retrieval using ChromaDB, JWT/Google authentication, and PostgreSQL-backed conversation management for secure, persistent user interactions.",
   },
   {
-    period: "3 Months",
+    period: "Sep 2025 - Nov 2025",
     role: "Artificial Intelligence Virtual Intern",
     company: "Infosys Springboard 6.0",
     description:
-      "Engineered a facial emotion recognition and personalized music recommendation pipeline in Python, optimizing SVM and NLP classifiers to 88% accuracy with structured data preprocessing pipelines.",
+      "Engineered a dual-module pipeline combining computer vision (OpenCV / CNNs) for facial expression detection and NLP classification (TF-IDF / SVM) for text sentiment analysis, achieving an aggregate classification accuracy of 88%. Structured data preprocessing pipelines for metadata normalization, improving overall music recommendation relevance metrics.",
   },
   {
-    period: "3 Months",
+    period: "Jun 2025 - Jul 2025",
     role: "Backend Development (Python)",
     company: "Hawky (Startup), Bangalore",
     description:
-      "Architected high-throughput Flask API endpoints, reducing core response latencies by 15%. Built scalable database schemas and resolved critical server bottlenecks before launch.",
+      "Architected and optimized high-throughput Flask API endpoints, reducing core application response latencies by 15%. Collaborated with startup engineers to build scalable database schemas and resolve critical server bottlenecks prior to launch.",
   },
 ];
 
