@@ -89,8 +89,8 @@ export default function Connect() {
 
         {/* 3-column gallery */}
         <div className="mt-6 grid gap-4 sm:grid-cols-3">
-          {galleryItems.map((g, i) => (
-            <Reveal index={i} key={g.label}>
+          {galleryItems.map((g, i) => {
+            const CardContent = (
               <figure className="group relative h-72 cursor-pointer overflow-hidden rounded-xl">
                 <div className="absolute inset-0">
                   <div
@@ -110,14 +110,47 @@ export default function Connect() {
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-70 transition-opacity duration-300 group-hover:opacity-95" />
                 <figcaption className="absolute inset-x-0 bottom-0 translate-y-2 p-5 opacity-80 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
-                  <p className="font-display text-sm font-semibold text-white">
-                    {g.label}
-                  </p>
-                  <p className="text-xs text-zinc-400">{g.caption}</p>
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <p className="font-display text-sm font-semibold text-white">
+                        {g.label}
+                      </p>
+                      <p className="text-xs text-zinc-400">{g.caption}</p>
+                    </div>
+                    {g.link && (
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        className="h-4 w-4 text-zinc-400 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-white"
+                      >
+                        <path d="M7 17L17 7M7 7h10v10" />
+                      </svg>
+                    )}
+                  </div>
                 </figcaption>
               </figure>
-            </Reveal>
-          ))}
+            );
+
+            return (
+              <Reveal index={i} key={g.label}>
+                {g.link ? (
+                  <a
+                    href={g.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block h-full w-full"
+                  >
+                    {CardContent}
+                  </a>
+                ) : (
+                  CardContent
+                )}
+              </Reveal>
+            );
+          })}
         </div>
       </div>
     </section>
