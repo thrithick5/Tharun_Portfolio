@@ -259,7 +259,7 @@ export default function Projects() {
         <div className="mt-14 grid gap-6 lg:grid-cols-3 lg:auto-rows-fr">
           {projects.map((p, i) => {
             if (i === 0) return <FeaturedCard key={p.number} p={p} />;
-            if (i === 3) return <WideCard key={p.number} p={p} />;
+            if (i >= 3) return <WideCard key={p.number} p={p} />;
             return <SplitCard key={p.number} p={p} reverse={i === 2} />;
           })}
         </div>

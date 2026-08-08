@@ -108,6 +108,16 @@ export const projects = [
     span: "lg:col-span-3",
     link: "https://emotion-detection-music-recommendat-kohl.vercel.app",
   },
+  {
+    number: "05",
+    title: "HMS — Hospital Management System",
+    stack: "Flask · React · Tailwind CSS · SQLite · Razorpay · Mistral AI",
+    accent: "#e11d48",
+    description:
+      "A premium hospital workspace management system featuring appointment scheduling, automated digital billing, lab test reporting, and custom AI integration.",
+    span: "lg:col-span-3",
+    link: "https://hms-project-zsa9.onrender.com",
+  },
 ];
 
 export const workExperience = [
